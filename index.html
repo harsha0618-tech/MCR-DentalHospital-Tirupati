@@ -492,6 +492,45 @@ Thankyou doc"</p>
                         <span class="form-error" id="error-name">Please enter your name</span>
                     </div>
                     <div class="form-group">
+    <label for="patient-age" class="form-label">Age</label>
+
+    <input
+        type="number"
+        id="patient-age"
+        class="form-input"
+        placeholder="Enter your age"
+        min="1"
+        max="120"
+        required>
+
+    <span class="form-error" id="error-age">
+        Please enter a valid age
+    </span>
+</div>
+
+<div class="form-group">
+    <label for="patient-gender" class="form-label">Gender</label>
+
+    <select
+        id="patient-gender"
+        class="form-input"
+        required>
+
+        <option value="">Select Gender</option>
+
+        <option value="Male">Male</option>
+
+        <option value="Female">Female</option>
+
+        <option value="Other">Other</option>
+
+    </select>
+
+    <span class="form-error" id="error-gender">
+        Please select your gender
+    </span>
+</div>
+                    <div class="form-group">
                         <label for="contact-phone" class="form-label">Phone Number</label>
                         <input type="tel" id="contact-phone" class="form-input" placeholder="+91 XXXXX XXXXX" required>
                         <span class="form-error" id="error-phone">Please enter a valid phone number</span>
@@ -532,12 +571,10 @@ Thankyou doc"</p>
     </span>
 
 </div>
-                    <div class="form-group">
-                        <label for="contact-message" class="form-label">Message</label>
-                        <textarea id="contact-message" class="form-input form-textarea" rows="4" placeholder="How can we help you?" required></textarea>
-                        <span class="form-error" id="error-message">Please enter your message</span>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-full">Book Appointment</button>
+                   
+                   <button type="submit" class="btn btn-primary btn-full">
+    Book Appointment
+</button>
                 </form>
                 <div class="contact-info card-premium">
                     <h3>Contact Information</h3>
