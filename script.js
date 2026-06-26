@@ -388,3 +388,73 @@ dateInput.addEventListener("change", function () {
     });
 
 });
+/* ===========================================
+   MCR Dental Hospital WhatsApp Appointment
+=========================================== */
+
+const appointmentForm = document.getElementById("contact-form");
+
+appointmentForm.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const name = document.getElementById("contact-name").value.trim();
+
+    const age = document.getElementById("patient-age").value.trim();
+
+    const gender = document.getElementById("patient-gender").value;
+
+    const phone = document.getElementById("contact-phone").value.trim();
+
+    const date = document.getElementById("appointment-date").value;
+
+    const time = document.getElementById("appointment-time").value;
+
+    if(
+        name === "" ||
+        age === "" ||
+        gender === "" ||
+        phone === "" ||
+        date === "" ||
+        time === ""
+    ){
+
+        alert("Please fill all the details.");
+
+        return;
+
+    }
+
+    const formattedDate = new Date(date).toLocaleDateString("en-IN",{
+        day:"2-digit",
+        month:"long",
+        year:"numeric"
+    });
+
+    const message =
+`🦷 *NEW APPOINTMENT REQUEST*
+
+👤 Name: ${name}
+
+🎂 Age: ${age}
+
+⚧ Gender: ${gender}
+
+📞 Phone: ${phone}
+
+📅 Appointment Date: ${formattedDate}
+
+🕒 Time Slot: ${time}
+
+Please confirm my appointment.
+
+Thank you.`;
+
+    const whatsappNumber = "919949579688";
+
+    const whatsappURL =
+`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL,"_blank");
+
+});
