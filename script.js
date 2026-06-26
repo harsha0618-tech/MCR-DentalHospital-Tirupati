@@ -272,6 +272,14 @@
             });
         });
     }
+    document.querySelectorAll(".treat-btn").forEach(button => {
+    button.addEventListener("click", () => {
+        const treatment = button.dataset.treatment;
+        const query = `${treatment} treatment meaning, uses, purpose, who needs it, benefits, risks, symptoms it treats, before and after images`;
+        const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+        window.open(url, "_blank");
+    });
+});
 
     // ============================================
     // LAZY LOAD IMAGES
