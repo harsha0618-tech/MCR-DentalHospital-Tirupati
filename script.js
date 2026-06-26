@@ -315,7 +315,6 @@
         initHeaderScroll();
         initFAQ();
         initContactForm();
-        initTreatmentButtons();
         initFloatingButtons();
         initActiveNav();
         initLazyLoad();
