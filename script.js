@@ -176,6 +176,13 @@
             });
         });
     }
+    //For treatment pages
+    document.querySelectorAll(".btn-page").forEach(button => {
+    button.addEventListener("click", function () {
+        const page = this.dataset.page;
+        window.location.href = `${page}.html`;
+    });
+});
 
     // ============================================
     // APPOINTMENT DATE & TIME SLOTS
